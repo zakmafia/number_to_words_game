@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en" class="h-100">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <link href="{{ url_for('static', filename='bootstrap/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='stylesheets/cover.css') }}" rel="stylesheet">
+  <script src="{{ url_for('static', filename='js/jquery-3.7.1.min.js') }}"></script>
+  <title>Number To Word Game</title>
+
+  <!-- Custom styles for this template -->
+  <link href="cover.css" rel="stylesheet">
+</head>
+
+<body class="d-flex h-100 text-center text-white bg-dark">
+
+  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <header class="mb-auto">
+      <div>
+        <h3 class="float-md-center mb-0">Number To Words Game</h3>
+      </div>
+    </header>
+
+    <main class="px-1">
+      <h3>Welcome to the Number to Words game!</h3>
+      <p class="lead">In this game, you will be given a random number in the range of (1000 - 500,000,000), and your
+        task is to convert it into words. For
+        example, if you are given the number 42, you should convert it to 'forty two'.</p>
+
+      <h4>Convert the number <strong>{{ number }}</strong> to words:</h4>
+      <br>
+      <form action="/convert" method="post">
+        <input type="hidden" name="number" value="{{ number }}">
+        <label for="words">Your answer:</label>
+        <input type="text" id="words" name="words" required>
+        <button type="submit">Submit</button>
+      </form>
+    </main>
+
+    <footer class="mt-auto text-white-50">
+      <p>Created by Zekarias Mesfin</p>
+    </footer>
+    <script src="{{ url_for('static', filename='bootstrap/popper.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='bootstrap/bootstrap.min.js') }}"></script>
+  </div>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <link href="{{ url_for('static', filename='bootstrap/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='stylesheets/cover.css') }}" rel="stylesheet">
+    <script src="{{ url_for('static', filename='js/jquery-3.7.1.min.js') }}"></script>
+    <title>Number To Word Game Result</title>
+
+    <!-- Custom styles for this template -->
+    <link href="cover.css" rel="stylesheet">
+</head>
+
+<body class="d-flex h-100 text-center text-white bg-dark">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+
+        <main class="px-1">
+            <h3>Number to Words Game - Result</h3>
+            <p class="lead">The number is {{number}}</p>
+            <h4>Convert the number <strong>{{ number }}</strong> to words:</h4>
+            <p>{{result}}</p>
+            <a href="/">Go back</a>
+        </main>
+
+        <footer class="mt-auto text-white-50">
+            <p>Created by Zekarias Mesfin</p>
+        </footer>
+        <script src="{{ url_for('static', filename='bootstrap/popper.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='bootstrap/bootstrap.min.js') }}"></script>
+    </div>
+</body>
+
+</html>
